@@ -1,5 +1,7 @@
 # predicate (Exemplo com removeIf)
 
+https://docs.oracle.com/javase/10/docs/api/java/util/function/Predicate.html
+
 ## Formas de excluir um item de uma lista
 
 Versões:
