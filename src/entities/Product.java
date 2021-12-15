@@ -25,6 +25,11 @@ public class Product {
 	public void setPrice(Double price) {
 		this.price = price;
 	}
+	
+	//metodo que implementa a logica para ser usada como predicado
+	public static boolean staticProductPredicate(Product p) {
+		return p.getPrice() >= 100;
+	}
 
 	@Override
 	public String toString() {

@@ -10,7 +10,10 @@ import util.ProductPredicate;
 public class Program {
 
 	public static void main(String[] args) {
-		/* remover o produto da lista com base no preço*/
+		/* Reference method com método estático*/
+		
+		/* ao invez de usar uma classe para usar como predicado
+		 * usa um metodo statico dentro da propria classe product*/
 		
 		Locale.setDefault(Locale.US);
 		
@@ -20,8 +23,8 @@ public class Program {
 		list.add(new Product("Tablet", 350.50));
 		list.add(new Product("HD Case", 80.90));
 		
-		//predicado implementado manualmente por meio da interface predicate
-		list.removeIf(new ProductPredicate());//remove de acordo com a classe especificada
+		//Referencia para metodo usando metodo static
+		list.removeIf(Product::staticProductPredicate);//remove de acordo com o metodo especificado
 		
 		for(Product p : list) {
 			System.out.println(p);
