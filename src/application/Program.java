@@ -10,9 +10,9 @@ import entities.Product;
 public class Program {
 
 	public static void main(String[] args) {
-		/* Expressão lambda declarada*/
+		/* Expressão lambda inline*/
 		
-		/* declara o predicado no main com a expressao lambida*/
+		/* usa a expressão lambida como predicado*/
 		
 		Locale.setDefault(Locale.US);
 		
@@ -22,11 +22,10 @@ public class Program {
 		list.add(new Product("Tablet", 350.50));
 		list.add(new Product("HD Case", 80.90));
 		
-		//declara uma variavel do tipo predicate passando uma expressao lambida
-		Predicate<Product> pred = p -> p.getPrice() >= 100.0;
+		double min = 100.0;//variavel que pode ser usada na expressao lambida
 		
-		//passa a variavel como predicado
-		list.removeIf(pred);//remove de acordo com a variavel especificada
+		//passa a expressao lambida como predicado
+		list.removeIf(p -> p.getPrice() >= min);//remove de acordo a expressao lambida indicada
 		
 		for(Product p : list) {
 			System.out.println(p);
