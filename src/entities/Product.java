@@ -27,8 +27,8 @@ public class Product {
 	}
 	
 	//metodo que implementa a logica para ser usada como predicado
-	public static boolean staticProductPredicate(Product p) {
-		return p.getPrice() >= 100;
+	public boolean nonStaticProductPredicate() {
+		return price >= 100;
 	}
 
 	@Override
